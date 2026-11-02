@@ -1,0 +1,21 @@
+node_modules/
+.next/
+.turbo/
+coverage/
+dist/
+*.tsbuildinfo
+*.log
+.env
+.env.*
+!.env.example
+.vercel/
+.DS_Store
+Thumbs.db
+
+# Registros e ferramentas locais, fora do codigo do produto.
+/.local/
+/.impeccable/
+/DESIGN.md
+AGENTS.md
+/apps/web/reference/proposta-DESIGN.md
+/apps/web/reference/proposta-design.json

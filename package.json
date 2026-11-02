@@ -1,0 +1,21 @@
+{
+  "name": "moveisporvoce",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=24.0.0 <25",
+    "pnpm": "11.25.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev --filter=@moveisporvoce/web",
+    "build": "turbo run build",
+    "start": "turbo run start --filter=@moveisporvoce/web",
+    "test": "turbo run test",
+    "typecheck": "turbo run typecheck",
+    "check": "turbo run test typecheck"
+  },
+  "devDependencies": {
+    "turbo": "2.11.10"
+  }
+}

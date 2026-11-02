@@ -1,0 +1,156 @@
+/* Ajustes funcionais da replica; identidade e composicao vem de reference.css. */
+html {
+  color-scheme: dark;
+}
+:focus-visible {
+  outline: 2px solid hsl(var(--primary));
+  outline-offset: 4px;
+}
+::selection {
+  background: hsl(var(--primary) / 0.3);
+  color: #fff;
+}
+.replica-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: calc(100vw - 2rem);
+  max-width: 390px;
+  max-height: calc(100dvh - 2rem);
+  overflow: auto;
+  padding: 28px 24px;
+  border: 1px solid hsl(var(--primary) / 0.35);
+  border-radius: 8px;
+  color: hsl(var(--foreground));
+  background: hsl(var(--card));
+  box-shadow: 0 0 32px hsl(var(--primary) / 0.18);
+}
+.replica-modal::backdrop {
+  background: rgb(0 0 0 / 0.8);
+}
+.replica-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  opacity: 0.7;
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+}
+.replica-modal-close:hover {
+  opacity: 1;
+}
+.replica-brand {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.replica-brand img {
+  position: absolute;
+  width: calc(100% * 512 / 486);
+  max-width: none;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.replica-brand-hero {
+  width: 240px;
+  aspect-ratio: 800 / 533;
+}
+.replica-brand-modal {
+  width: 150px;
+  height: 96px;
+}
+@media (min-width: 768px) {
+  .replica-brand-hero { width: 320px; }
+}
+.replica-modal-title {
+  margin-top: 0;
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.375;
+  text-align: center;
+}
+.replica-capture-form {
+  display: grid;
+  gap: 16px;
+  width: 100%;
+  margin-top: 28px;
+}
+.replica-capture-form input,
+.replica-capture-form select {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  padding: 8px 12px;
+  border: 1px solid hsl(var(--input));
+  border-radius: 6px;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+}
+.replica-capture-form input::placeholder {
+  color: hsl(var(--muted-foreground));
+}
+.replica-phone {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 12px;
+}
+.replica-submit {
+  width: 100%;
+  min-height: 52px;
+  margin-top: 8px;
+  padding: 12px;
+  border-radius: 8px;
+  color: hsl(var(--primary-foreground));
+  background: hsl(var(--primary));
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+  box-shadow: 0 0 28px hsl(var(--primary) / 0.35);
+}
+.replica-submit:hover {
+  filter: brightness(1.1);
+}
+.replica-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+.replica-field-error,
+.replica-form-error {
+  font-size: 13px;
+  line-height: 1.4;
+  color: #ffaaa0;
+  margin-top: 6px;
+}
+.replica-gallery-dot {
+  display: grid;
+  place-items: center;
+  min-width: 14px;
+  height: 18px;
+}
+.replica-gallery-dot span {
+  display: block;
+}
+@media (min-width: 640px) {
+  .replica-modal {
+    padding-inline: 28px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

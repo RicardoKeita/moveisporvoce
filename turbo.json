@@ -1,0 +1,35 @@
+{
+  "$schema": "https://turborepo.com/schema.json",
+  "globalDependencies": ["packages/typescript-config/*.json"],
+  "globalPassThroughEnv": [
+    "NODE_USE_SYSTEM_CA",
+    "NODE_EXTRA_CA_CERTS",
+    "NEXT_TELEMETRY_DISABLED"
+  ],
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "outputs": [".next/**", "!.next/cache/**"],
+      "env": ["SUPABASE_URL", "SUPABASE_PUBLISHABLE_KEY"]
+    },
+    "typecheck": {
+      "dependsOn": ["build"],
+      "outputs": ["*.tsbuildinfo"]
+    },
+    "test": {
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true,
+      "env": ["SUPABASE_URL", "SUPABASE_PUBLISHABLE_KEY"]
+    },
+    "start": {
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true,
+      "env": ["SUPABASE_URL", "SUPABASE_PUBLISHABLE_KEY"]
+    }
+  }
+}
