@@ -1,5 +1,5 @@
 // Variante /lp com provas visuais; home preservada.
-import { ResultsProof, SupportProof, StudentProof } from "./proof";
+import { ResultsProof } from "./proof";
 import "./proof.css";
 // Replica do DOM publico observado em 31/10/2026. Fonte: ../reference/page-tree.json.
 import "../reference-fonts.css";
@@ -1818,10 +1818,8 @@ export default function Home() {
         <ProofSection />
         <TruthSection />
         <CurriculumSection />
-        <SupportProof />
         <AudienceSection />
         <RecapSection />
-        <StudentProof />
         <OfferSection />
         <UrgencySection />
         <AuthoritySection />
