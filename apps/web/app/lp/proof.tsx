@@ -34,8 +34,7 @@ export function ResultsProof() {
   }
   return <section className="lp-testimonials" aria-labelledby="lp-testimonials-title">
     <div className="lp-testimonials-inner">
-      <h2 id="lp-testimonials-title">Projetos que saíram do papel.<br />Relatos de quem colocou em prática.</h2>
-      <p className="lp-wall-intro">Veja o que os alunos compartilham na comunidade Móveis Por Você.</p>
+      <div className="glow-divider mb-8" /><h2 id="lp-testimonials-title">Pessoas comuns já estão economizando <span>mais da metade do valor</span> fazendo seus próprios móveis</h2>
       <div className={`lp-wall-viewport${expanded ? " is-expanded" : ""}`} id="lp-testimonial-wall">
         <div className="lp-wall">
           {columns.map((column, index) => <div className="lp-wall-column" key={index}>

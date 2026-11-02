@@ -1,4 +1,4 @@
-// Variante /lp com provas visuais; home preservada.
+// /lp preserva a pagina original e substitui apenas o carrossel de depoimentos.
 import { ResultsProof } from "./proof";
 import "./proof.css";
 // Replica do DOM publico observado em 31/10/2026. Fonte: ../reference/page-tree.json.
@@ -1815,6 +1815,7 @@ export default function Home() {
     <LeadCaptureProvider>
       <main className="min-h-screen bg-background">
         <HeroSection />
+        <ProjectsSection />
         <ProofSection />
         <TruthSection />
         <CurriculumSection />
